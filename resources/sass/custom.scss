@@ -1,0 +1,443 @@
+/*VARIABLE*/
+/*vd=20230712144011*/
+
+// COMPANY COLOR
+.text-glam {
+   color: #a68b65 !important;
+}
+
+.btn-glam,.btn-danger.btn-glam {
+   background-color: #a68b65 !important;
+   color: white;
+}
+
+.btn-glam:hover {
+   background-color: #ba9f7b !important;
+   color: white;
+}
+
+.border-danger.border-glam {
+   border-color: #a68b65 !important;
+}
+
+.badge-glam {
+   background-color: #a68b65 !important;
+   color: white;
+}
+
+/*CURSOR*/
+.cr-p {
+   cursor: pointer;
+}
+
+.previewImg {
+   transition: opacity .3s ease-in-out;
+}
+
+.previewImg.cr-p:hover {
+   opacity: 0.7;
+}
+
+/*SCROLL*/
+html {
+   /*scroll-behavior: smooth;*/
+}
+
+#vid[src="video/movie_2-1_loop_vertical.mp4?vd=20230712144011"] {
+/*#vid[src="https://drive.google.com/uc?export=download&id=11zbKX_qUHla6j7q8NP3mB23dTElrTWRG"] {*/
+  width: 20%;
+}
+
+/*******************************************/
+/*MEDIA SETTING*/
+/*******************************************/
+@media only screen and (max-width: 1280px) {
+
+   #vid[src="video/movie_2-1_loop_vertical.mp4?vd=20230712144011"] {
+/*   #vid[src="https://drive.google.com/uc?export=download&id=11zbKX_qUHla6j7q8NP3mB23dTElrTWRG"] {*/
+     width: 30% !important;
+   }
+}
+
+
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 768px){
+
+   #vid[src="video/movie_2-1_loop_vertical.mp4?vd=20230712144011"] {
+/*   #vid[src="https://drive.google.com/uc?export=download&id=11zbKX_qUHla6j7q8NP3mB23dTElrTWRG"] {*/
+     width: 50% !important;
+   }
+
+   .container-md, .container-sm, .container {
+      /*max-width: 768px;*/
+   }
+
+  .container-fluid>.container>.row .col-md-10.offset-md-1 {
+      max-width: 100% !important;
+      /*margin-left: 15px !important;
+      margin-right: 15px !important;*/
+   }
+
+
+   #video-banner {
+      height: 432px;
+   }
+   #video-banner video {
+      top: 0;
+      width: 180% !important;
+   }
+   #logo-banner {
+      position: absolute;
+      height: calc(432px / 2) !important;
+      width: 100%;
+      top: calc((432px / 2) - 50px) !important;
+   }
+   #logo-banner #x {
+      top: -25px !important;
+   }
+   #sec3 #btn-service .fs-4 {
+      font-size: 0.9rem !important;
+   }
+   
+  .modal-content {
+    max-width: 80%;
+  }
+
+  #sec3-adv1 .fs-2 {
+      font-size: 1rem !important;
+  }
+
+  #sec3-adv1 .display-4 {
+      font-size: 1.8rem !important;
+  }
+
+  #sec3-adv2 {
+   border-top-width: 1.8rem !important;
+   /*border-top-width: 5rem !important;*/
+   /*margin-top:-3.5rem;*/
+  }
+
+  .container-fluid>.container {
+      margin: 0 !important;
+      padding-right: 0 !important;
+      padding-left: 0 !important;
+  }
+
+  .container-fluid>.container>.row .col-md-10.offset-md-1 {
+   /*width: 100% !important;
+   margin-left: 0 !important;*/
+   margin: 0 auto;
+  }
+
+  .col-md-2.text-end {
+   text-align: left !important;
+   text-decoration: underline;
+  }
+
+   #capacity-service-2 span.display-2 {
+      font-size: 2.7rem !important;
+   }
+}
+
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 550px){
+
+   #vid[src="video/movie_2-1_loop_vertical.mp4?vd=20230712144011"] {
+/*   #vid[src="https://drive.google.com/uc?export=download&id=11zbKX_qUHla6j7q8NP3mB23dTElrTWRG"] {*/
+     width: 65% !important;
+   }
+
+   #logo-banner {
+      top: calc((480px / 2) - 120px) !important;
+   }
+
+   #capacity-service-2 span, #capacity-service-2 span.display-2 {
+      font-size: 1.8rem !important;
+   }
+
+   #logo-banner .marumori-logo {
+      display: block !important;
+      margin: auto !important;
+   }
+
+   #logo-banner .jhs-logo {
+      display: block !important;
+      margin: auto !important;
+      padding: 0 !important;
+      margin-top: 20px !important;
+   }
+
+   #logo-banner #x {
+      top: 70px !important;
+      left: -10px;
+   }
+
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 425px){
+
+   #vid[src="video/movie_2-1_loop_vertical.mp4?vd=20230712144011"] {
+/*   #vid[src="https://drive.google.com/uc?export=download&id=11zbKX_qUHla6j7q8NP3mB23dTElrTWRG"] {*/
+     width: 90% !important;
+   }
+
+   /*.container-fluid {
+      padding-right: 1rem !important;
+      padding-left: 1rem !important;
+   }*/
+
+   .container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
+      padding-right: 0 !important;
+      padding-left: 0 !important;
+   }
+
+   /*Margin Top Section No*/
+   .container-fluid .border-danger.mt-5 {
+      margin-top: 1rem !important;
+   }
+
+   #logo-banner #x {
+      font-weight: 400 !important;
+      font-size: 3rem !important;
+      left: -24px !important;
+   }
+
+   #video-banner video {
+      width: 200% !important;
+      left: -385px !important;
+   }
+
+   /*-----------------*/
+   /*#sec3*/
+   /*-----------------*/
+
+   #main-title-service {
+      font-size: 1.4rem !important;
+      text-align: center;
+   }
+
+   #sec3-adv1>.col-md-12 {
+      text-shadow: none !important;
+   }
+
+   /*remove right-left padding to make same size with others*/
+   #sec3-adv2>.col-md-12>.row>.col-md-6 {
+      padding-right: 0 !important;
+      padding-left: 0 !important;
+   }
+
+   #sec3 #btn-service .fs-4 {
+    font-size: 1.2rem !important;
+   }
+   /*-----------------*/
+   /*#sec3*/
+   /*-----------------*/
+
+   /*Text under image num/title*/
+   .col-md-10.offset-md-1>.text-start.mt-2.fs-5,
+   .col-md-10.offset-md-1>.text-left.mt-2.fs-5, {
+      font-size: 1rem !important;
+   }
+
+   /*Section Detail*/
+   .text-right.col-md-2 {
+      text-align: left !important;
+      font-weight: bold;
+      text-decoration: underline;
+   }
+
+   /*Margin bottom cg/vr/movie example*/
+   .row>.col-md-3.mb-4 {
+      margin-bottom: 1rem !important;
+   }
+
+   /*Image of cg/vr/movie no*/
+   .row>.col-md-12>.border-danger>img {
+      width: 40px !important;
+   }
+   /*Title of no/red underline*/
+   .row>.col-md-12>.border-danger>.fs-3,
+   #flow .border-danger>.fs-3,
+   #faq .border-danger>.fs-3,
+   #services .border-danger>.fs-3 {
+      font-size: 1.4rem !important;
+   }
+   .row>.col-md-12>.border-danger>.ml-3 {
+      margin-left: 0.5rem !important;
+   }
+   .row>.col-md-12>.border-danger.pl-4,
+   .row>.col-md-12>.border-danger .pl-4 {
+      padding-left: 0 !important;
+      text-align: center !important;
+   }
+
+   .fs-3.company-name {
+      font-size: 1.3rem !important;
+   }
+
+   /*flow img margin bottom*/
+   #flow .flow-illustration {
+      display: none !important;
+   }
+
+   .id-contact {
+      text-align: center !important;
+   }
+
+   #company-name-footer.mb-4 {
+      margin-bottom: 0 !important;
+   }
+
+   #telp-mt {
+      margin-top: 10px !important;
+   }
+
+   #hp-no span.fw-bold.display-6 {
+      font-size: 2.2rem !important;
+   }
+
+   #btn-go-top {
+      right: 15px !important;
+      bottom: 15px !important;
+   }
+   #btn-toi {
+      right: 15px !important;
+      bottom: 15px !important;
+   }
+   #btn-show-hide {
+      right: 15px !important;
+      bottom: 100px !important;
+   }
+   #btn-show-hide2 {
+      right: 15px !important;
+      bottom: 15px !important;
+   }
+}
+
+/*.fade-enter-active, .fade-leave-active {
+  transition: opacity .8s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}*/
+.fade-enter-active, .fade-leave-active {
+  transition-property: opacity;
+  transition-duration: .5s;
+}
+
+.fade-enter-active {
+  transition-delay: .5s;
+}
+
+.fade-enter, .fade-leave-active {
+  opacity: 0
+}
+/* .fade-leave-active below version 2.1.8 */
+
+
+/*--------------------------------------------------------------------------------------------------------------*/
+/*MODAL*/
+/* The Modal (background) */
+.modal {
+   position: fixed; /* Stay in place */
+   z-index: 100; /* Sit on top */
+   padding-top: 0px; /* Location of the box */
+   left: 0;
+   top: 0;
+   max-width: 100%; /* Full width */
+   max-height: 100%; /* Full height */
+   overflow: hidden; /* Enable scroll if needed */
+   background-color: rgb(0,0,0); /* Fallback color */
+   background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+   max-width: 80%;
+   /*opacity: 0;*/
+   background-color: transparent !important;
+}
+
+/* Add Animation - Zoom in the Modal */
+/*.modal-content {
+animation-delay: 0.3s;
+animation-name: fadeIn;
+animation-duration: 0.6s;
+}*/
+
+.modal {
+/*animation-delay: 0.3s;*/
+animation-name: fadeIn;
+animation-duration: .6s;
+}
+
+@keyframes fadeIn {
+0% {opacity:  0;}
+30% {opacity:  0;}
+100% {opacity: 1;}
+}
+
+/* The Close Button */
+.close {
+position: absolute;
+top: 15px;
+right: 35px;
+color: #f1f1f1;
+font-size: 40px;
+font-weight: bold;
+transition: 0.3s;
+z-index: 100;
+}
+
+.close:hover,
+.close:focus {
+color: #bbb;
+text-decoration: none;
+cursor: pointer;
+}
+
+/*#vid[src="video/movie_2-5.mp4"] {*/
+/*#vid[src="https://drive.google.com/uc?export=download&id=11zbKX_qUHla6j7q8NP3mB23dTElrTWRG"] {
+   max-width: 450px !important;
+}*/
+/*END MODAL*/
+/*--------------------------------------------------------------------------------------------------------------*/
+
+/*FORM*/
+.form-error {
+   font-size: 0.8rem;
+}
+
+/*--------------------------------------------------------------------------------------------------------------*/
+/*SLIDER*/
+
+.slider-before,
+.slider-after {
+   margin: 0;
+}
+
+.slider-before figcaption,
+.slider-after figcaption {
+   background: rgba(255, 255, 255, .5);
+   border: 1px solid #c0c0c0;
+   border-radius: 3px;
+   color: #2e3452;
+   opacity: 0.8;
+   padding: 12px;
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   line-height: 100%;
+}
+
+.slider-before figcaption {
+   left: 12px;
+}
+
+.slider-after figcaption {
+   right: 12px;
+}
+/*--------------------------------------------------------------------------------------------------------------*/
