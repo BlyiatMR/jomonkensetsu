@@ -9,50 +9,45 @@
         </svg>
     </div> -->
 
-
     <section>
-        <div class="flex justify-center items-center gap-4 py-2 border border-b-[3px] border-[#A0138E] bg-[#EFF1F2] max-md:hidden">
-            <p class="font-semibold">This site was designed with the wix.com website builder. Create your Website today.</p>
-            <a href="#" class="py-1 px-5 font-semibold border border-[#A0138E] rounded-2xl text-[#A0138E]">Start Now</a>
+    <nav class="flex justify-evenly items-center max-md:justify-center max-md:relative max-md:overflow-hidden">
+      <div class="my-3">
+        <img src="assets/img/jomon/home1/icon-logo.jpg" class="w-[90px] max-md:w-[120px]" alt="Logo">
+      </div>
+      <!-- Desktop Navigation -->
+      <div class="flex gap-5 mt-3 max-md:hidden">
+        <a href="#" class="text-[13px] border-t-4 border-[#1A377C] px-2 pt-[5px]">ホーム</a>
+        <a href="#" class="text-[#1A377C] text-[13px] border-t-[1px] border-[#1A377C] px-2 pt-2 hover:border-t-4 hover:pt-[5px]">構造</a>
+        <a href="#" class="text-[#1A377C] text-[13px] border-t-[1px] border-[#1A377C] px-2 pt-2 hover:border-t-4 hover:pt-[5px]">代表者について</a>
+        <a href="#" class="text-[#1A377C] text-[13px] border-t-[1px] border-[#1A377C] px-2 pt-2 hover:border-t-4 hover:pt-[5px]">これまでの歩み</a>
+        <a href="#" class="text-[#1A377C] text-[13px] border-t-[1px] border-[#1A377C] px-2 pt-2 hover:border-t-4 hover:pt-[5px]">お問い合わせ</a>
+      </div>
+      <!-- Mobile Navigation Button -->
+      <div class="max-md:flex hidden justify-end">
+        <div id="resNav" @click="toggleMenu" class="absolute top-10 right-10">
+          <img id="resBtn" class="w-[35px]" src="assets/img/jomon/home1/bars-icon.jpg" alt="Menu Button">
         </div>
-    </section>
-
-    <section>
-        <nav class="flex justify-evenly items-center max-md:justify-center max-md:relative max-md:overflow-hidden">
-            <div class="my-3">
-                <img src="assets/img/jomon/icon-logo.jpg" class="w-[90px] max-md:w-[120px]" alt="">
-            </div>
-            <div class="flex gap-5 mt-3 max-md:hidden">
-                <a href="#" class="text-[13px] border-t-4 border-[#1A377C] px-2 pt-[5px]">ホーム</a>
-                <a href="#" class="text-[#1A377C] text-[13px] border-t-[1px] border-[#1A377C] px-2 pt-2 hover:border-t-4 hover:pt-[5px]">構造</a>
-                <a href="#" class="text-[#1A377C] text-[13px] border-t-[1px] border-[#1A377C] px-2 pt-2 hover:border-t-4 hover:pt-[5px]">代表者について</a>
-                <a href="#" class="text-[#1A377C] text-[13px] border-t-[1px] border-[#1A377C] px-2 pt-2 hover:border-t-4 hover:pt-[5px]">これまでの歩み</a>
-                <a href="#" class="text-[#1A377C] text-[13px] border-t-[1px] border-[#1A377C] px-2 pt-2 hover:border-t-4 hover:pt-[5px]">お問い合わせ</a>
-            </div>
-            <div class="max-md:flex hidden justify-end">
-                <div id="resNav" class="absolute top-10 right-10">
-                    <img id="resBtn" class="w-[35px]" src="assets/img/jomon/bars-icon.jpg" alt="">
-                </div>
-                <div id="resMenu" class="fixed top-0 left-0 w-full h-[664px] p-10 bg-white text-black hidden resGoDown z-50">
-                    <div id="resNavClose" class="absolute top-10 right-10 rounded-md text-black">
-                        <img class="w-[35px]" src="assets/img/jomon/close-icon.jpg" alt="">
-                    </div>
-                    <div class="block"></div>
-                    <div class="flex flex-col mb-8">
-                        <a href="#" class="text-[25px] text-center mt-10">ホーム</a>
-                        <a href="#" class="text-[25px] text-center mt-10">構造</a>
-                        <a href="#" class="text-[25px] text-center mt-10">代表者について</a>
-                        <a href="#" class="text-[25px] text-center mt-10">これまでの歩み</a>
-                        <a href="#" class="text-[25px] text-center mt-10">お問い合わせ</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </section>
+        <!-- Mobile Menu -->
+        <div v-bind:class="{'hidden': !menuVisible, 'block': menuVisible}" id="resMenu" class="fixed top-0 left-0 w-full h-[664px] p-10 bg-white text-black resGoDown z-50">
+          <div id="resNavClose" @click="closeMenu" class="absolute top-10 right-10 rounded-md text-black">
+            <img class="w-[35px]" src="assets/img/jomon/home1/close-icon.jpg" alt="Close Button">
+          </div>
+          <div class="block"></div>
+          <div class="flex flex-col mb-8">
+            <a href="#" class="text-[25px] text-center mt-10">ホーム</a>
+            <a href="#" class="text-[25px] text-center mt-10">構造</a>
+            <a href="#" class="text-[25px] text-center mt-10">代表者について</a>
+            <a href="#" class="text-[25px] text-center mt-10">これまでの歩み</a>
+            <a href="#" class="text-[25px] text-center mt-10">お問い合わせ</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
 
     <section>
         <div class="relative overflow-hidden flex items-center justify-center h-fit w-full">
-            <img class="w-full object-cover object-top -z-10 max-md:inset-auto" src="assets/img/jomon/bg-home.jpg" alt="">
+            <img class="w-full object-cover object-top -z-10 max-md:inset-auto" src="assets/img/jomon/home1/bg-home.jpg" alt="">
             <div class="absolute z-20 text-center">
                 <h1 class="text-white text-[40px] font-semibold max-md:text-[19px]">縄文文明の知恵を今に！</h1>
             </div>
@@ -72,7 +67,7 @@
 
         <div class="relative mt-20 mx-16 max-md:mx-6">
             <div class="absolute top-16 right-0 -z-20 max-lg:static">
-                <img class="max-lg:w-full" src="assets/img/jomon/pict-home.jpg" width="460px" alt="">
+                <img class="max-lg:w-full" src="assets/img/jomon/home1/pict-home.jpg" width="460px" alt="">
             </div>
             <div class="py-8 px-14 bg-[#F3F5F8] w-[476px] z-50 max-lg:mt-5 max-md:px-10 max-md:py-5 max-lg:w-full">
                 <div class="mb-5">
@@ -116,7 +111,7 @@
             </div>
             <div class="relative mt-10">
                 <div class="absolute -top-10 left-0 bg-[#F3F5F8] bg-opacity-50 p-3 w-fit max-lg:static max-lg:bg-transparent max-lg:w-full">
-                    <img class="max-lg:w-full" src="assets/img/jomon/people.jpg" width="350px" alt="">
+                    <img class="max-lg:w-full" src="assets/img/jomon/home1/people.jpg" width="350px" alt="">
                 </div>
                 <div class="bg-[#F3F5F8] mt-20 ml-80 py-5 px-16 max-lg:ml-0 max-lg:mt-5 max-lg:px-10 max-md:px-6 max-lg:py-5 max-lg:mx-6 max-md:mx-0 max-lg:w-full">
                     <div class="flex items-end my-5">
@@ -210,7 +205,7 @@
     <footer class="bg-[#F3F5F8] py-7">
         <div class="max-w-[980px] mx-auto flex justify-center items-center gap-32 max-md:flex-col max-md:gap-5">
             <div>
-                <img src="assets/img/jomon/icon-logo.jpg" width="96px" alt="">
+                <img src="assets/img/jomon/home1/icon-logo.jpg" width="96px" alt="">
             </div>
             <div class="flex">
                 <svg class="w-[35px] h-[21px] fill-[#1A377C]" preserveAspectRatio="none" data-bbox="53.5 64.6 93.4 62.1" viewBox="53.5 64.6 93.4 62.1" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="shape" role="presentation" aria-hidden="true" aria-label="">
@@ -232,29 +227,26 @@
 // Navigation Responsive
 // Navigation Responsive
 
-document.addEventListener("DOMContentLoaded", function() {
-    const respoNav = document.getElementById('resNav');
-    const respoMenu = document.getElementById('resMenu');
-    const respoNavClose = document.getElementById('resNavClose');
-
-    respoNav.addEventListener('click', function() {
-        if (respoMenu.classList.contains('hidden')) {
-            respoMenu.classList.remove('hidden');
-            respoMenu.classList.add('block');
-        } else {
-            respoMenu.classList.add('hidden');
-            respoMenu.classList.remove('block');
-        }
-    });
-
-    respoNavClose.addEventListener('click', function() {
-        respoMenu.classList.add('nav-close');
-        setTimeout(() => {
-            respoMenu.classList.add('hidden');
-            respoMenu.classList.remove('block', 'nav-close');
-        }, 650);
-    });
-});
+export default {
+  data() {
+    return {
+      menuVisible: false
+    };
+  },
+  methods: {
+    toggleMenu() {
+      this.menuVisible = !this.menuVisible;
+    },
+    closeMenu() {
+      const respoMenu = document.getElementById('resMenu');
+      respoMenu.classList.add('nav-close');
+      setTimeout(() => {
+        this.menuVisible = false;
+        respoMenu.classList.remove('nav-close');
+      }, 150);
+    }
+  }
+};
 
 // Navigation Responsive
 // Navigation Responsive

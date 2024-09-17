@@ -7,6 +7,7 @@ import Privacy from './pages/Privacy'
 import ContactForm from './pages/ContactForm'
 import ContactMessageReview from './pages/ContactMessageReview'
 import Error404Page from './pages/Error404Page'
+import Structure from './pages/Structure'
 
 import Timer from './pages/Timer'
 
@@ -29,6 +30,7 @@ const routes = [
    { path: '/contact-form', component: ContactForm },
    { path: '/contact-message-review', component: ContactMessageReview },
    { path: '/timer', component: Timer },
+   { path: '/structure', component: Structure },
    { path: '*', component: Error404Page, meta: { noSidebar: true } }
 ]
 
