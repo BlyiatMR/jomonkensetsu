@@ -616,6 +616,9 @@ video {
 .relative {
   position: relative;
 }
+.inset-0 {
+  inset: 0px;
+}
 .-top-10 {
   top: -2.5rem;
 }
@@ -628,17 +631,20 @@ video {
 .right-0 {
   right: 0px;
 }
-.right-10 {
-  right: 2.5rem;
+.right-6 {
+  right: 1.5rem;
 }
 .top-0 {
   top: 0px;
 }
-.top-10 {
-  top: 2.5rem;
+.top-1 {
+  top: 0.25rem;
 }
 .top-16 {
   top: 4rem;
+}
+.top-5 {
+  top: 1.25rem;
 }
 .-z-10 {
   z-index: -10;
@@ -682,6 +688,10 @@ video {
   margin-left: 12rem;
   margin-right: 12rem;
 }
+.mx-\[100px\] {
+  margin-left: 100px;
+  margin-right: 100px;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -693,6 +703,10 @@ video {
 .my-12 {
   margin-top: 3rem;
   margin-bottom: 3rem;
+}
+.my-16 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 .my-3 {
   margin-top: 0.75rem;
@@ -726,6 +740,9 @@ video {
 }
 .mb-8 {
   margin-bottom: 2rem;
+}
+.ml-1 {
+  margin-left: 0.25rem;
 }
 .ml-2 {
   margin-left: 0.5rem;
@@ -798,14 +815,14 @@ video {
 .hidden {
   display: none;
 }
+.h-\[100vh\] {
+  height: 100vh;
+}
 .h-\[21px\] {
   height: 21px;
 }
 .h-\[259px\] {
   height: 259px;
-}
-.h-\[36px\] {
-  height: 36px;
 }
 .h-\[37px\] {
   height: 37px;
@@ -816,9 +833,6 @@ video {
 .h-\[60px\] {
   height: 60px;
 }
-.h-\[664px\] {
-  height: 664px;
-}
 .h-\[80px\] {
   height: 80px;
 }
@@ -826,6 +840,9 @@ video {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+}
+.h-full {
+  height: 100%;
 }
 .w-1\/5 {
   width: 20%;
@@ -838,9 +855,6 @@ video {
 }
 .w-\[326px\] {
   width: 326px;
-}
-.w-\[34px\] {
-  width: 34px;
 }
 .w-\[350px\] {
   width: 350px;
@@ -904,6 +918,9 @@ video {
 .justify-center {
   justify-content: center;
 }
+.justify-between {
+  justify-content: space-between;
+}
 .justify-evenly {
   justify-content: space-evenly;
 }
@@ -931,9 +948,6 @@ video {
 .border {
   border-width: 1px;
 }
-.border-t-4 {
-  border-top-width: 4px;
-}
 .border-t-\[1px\] {
   border-top-width: 1px;
 }
@@ -952,6 +966,10 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(26 55 124 / var(--tw-bg-opacity));
 }
+.bg-\[\#B0C4DE\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(176 196 222 / var(--tw-bg-opacity));
+}
 .bg-\[\#F3F5F8\] {
   --tw-bg-opacity: 1;
   background-color: rgb(243 245 248 / var(--tw-bg-opacity));
@@ -965,6 +983,9 @@ video {
 }
 .fill-\[\#1A377C\] {
   fill: #1A377C;
+}
+.fill-\[\#33343F\] {
+  fill: #33343F;
 }
 .fill-white {
   fill: #fff;
@@ -1088,9 +1109,6 @@ video {
 .pt-5 {
   padding-top: 1.25rem;
 }
-.pt-\[5px\] {
-  padding-top: 5px;
-}
 .text-left {
   text-align: left;
 }
@@ -1177,9 +1195,21 @@ video {
 .text-\[\#3344F\] {
   color: #3344F;
 }
+.text-\[\#999A9F\] {
+  --tw-text-opacity: 1;
+  color: rgb(153 154 159 / var(--tw-text-opacity));
+}
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+.text-red-600 {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
 }
 .text-white {
   --tw-text-opacity: 1;
@@ -1257,7 +1287,7 @@ video {
 /*SCROLL*/
 
 html {
-  /*scroll-behavior: smooth;*/
+  scroll-behavior: smooth;
 }
 
 #vid[src="video/movie_2-1_loop_vertical.mp4?vd=20230712144011"] {
@@ -1541,7 +1571,7 @@ html {
   }
 
   #btn-go-top {
-    right: 15px !important;
+    right: 50px !important;
     bottom: 15px !important;
   }
 
@@ -1729,6 +1759,12 @@ animation-duration: 0.6s;
 
 .slider-after figcaption {
   right: 12px;
+}
+
+.router-link-exact-active,
+.router-link-active {
+  background: none !important;
+  border-top-width: 4px;
 }
 
 /*--------------------------------------------------------------------------------------------------------------*/
@@ -2004,6 +2040,13 @@ button.toast-close-button {
   padding-top: 5px;
 }
 
+@media not all and (min-width: 1280px) {
+
+  .max-xl\:hidden {
+    display: none;
+  }
+}
+
 @media not all and (min-width: 1024px) {
 
   .max-lg\:static {
@@ -2095,6 +2138,10 @@ button.toast-close-button {
     width: 120px;
   }
 
+  .max-md\:w-\[210px\] {
+    width: 210px;
+  }
+
   .max-md\:w-full {
     width: 100%;
   }
@@ -2138,8 +2185,24 @@ button.toast-close-button {
     font-size: 14px;
   }
 
-  .max-md\:text-\[19px\] {
-    font-size: 19px;
+  .max-md\:text-\[25px\] {
+    font-size: 25px;
+  }
+
+  .max-md\:text-\[35px\] {
+    font-size: 35px;
+  }
+}
+
+@media not all and (min-width: 640px) {
+
+  .max-sm\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .max-sm\:h-52 {
+    height: 13rem;
   }
 }
 

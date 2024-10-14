@@ -16,13 +16,8 @@ class CreateContactFormsTable extends Migration
         Schema::create('contact_forms', function (Blueprint $table) {
             $table->id();
             $table->string('company', 255);
-            $table->string('code', 100);
-            $table->string('name', 255);
-            $table->string('phone', 17);
             $table->string('email', 255);
-            $table->string('subject', 510);
-            $table->text('content');
-            $table->boolean('is_readed')->default(0);
+            $table->text('body');
             $table->timestamps();
         });
     }

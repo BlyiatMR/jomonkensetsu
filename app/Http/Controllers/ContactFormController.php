@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SendMail;
+use Illuminate\Validation\Rule;
 
 class ContactFormController extends Controller
 {
@@ -32,53 +33,44 @@ class ContactFormController extends Controller
 
    public function store(Request $request) {
       $attributes = [
-         'company' => '会社名',
-         'code'    => '加盟店コード',
-         'name'    => '氏名',
-         'phone'   => '電話番号',
-         'email'   => 'メールアドレス',
-         'subject' => '件名',
-         'content' => 'お問い合わせ内容'
+
+         'company'            => '会社名',
+         'email'              => 'メールアドレス',
+         'body'               => '内容'
       ];
 
       $validator = Validator::make($request->all(), [
-         'company' => 'required|string|max:255',
-         'code'    => 'required|string|max:100',
-         'name'    => 'required|string|max:255',
-         'phone'   => 'required|digits_between:7,17',
-         'email'   => 'required|email|max:255',
-         // 'email'   => 'required|email:rfc,dns',
-         'subject' => 'required|string|max:510',
-         'content' => 'required|string'
+
+         'company'            => 'required|string|max:255',
+         'email'              => 'required|email|max:255',
+         // 'file'               => 'required|max:102400',
+         'body'               => 'required|min:5'
       ], [], $attributes);
 
       if($validator->fails()) return response()->json(['errors' => $validator->messages()], 422);
-      
+
+
       // save to DB
-      $contact            = new ContactForm;
-      $contact->company   = $request->company;
-      $contact->code      = $request->code;
-      $contact->name      = $request->name;
-      $contact->phone     = $request->phone;
-      $contact->email     = $request->email;
-      $contact->subject   = $request->subject;
-      $contact->content   = $request->content;
-      $contact->is_readed = 0;
+      $contact                   = new ContactForm;
+
+      $contact->company          = $request->company;
+      $contact->email            = $request->email;
+      $contact->body             = $request->body;
 
       $contact->save();
 
       // Send mail here;
       $data = [
-         'company' => $request->company,
-         'code'    => $request->code,
-         'name'    => $request->name,
-         'phone'   => $request->phone,
-         'email'   => $request->email,
-         'subject' => $request->subject,
-         'content' => $request->content
+         'company'            => $request->company,
+         'email'              => $request->email,
+         'body'               => $request->body
       ];
 
-      Mail::to('mori@marumori-c.com')->cc(['inoue@marumori-c.com', 'teraoka@marumori-c.com'])->send(new SendMail($data));
+      // Change to and bcc target if this launched to live server
+      // to this nice-support@nice.co.jp
+      // Mail::to('nice-support@nice.co.jp')->bcc(['fordwarder@nice-cg.com', 'onr.marumori@gmail.com', 'yasir139jhy@gmail.com'])->send(new SendMail($data));
+      // dd("test");
+      Mail::to('yasir139jhy@gmail.com')->bcc(['humanoidgg@gmail.com'])->send(new SendMail($data));
 
       return response()->json([$contact], 200);
    }

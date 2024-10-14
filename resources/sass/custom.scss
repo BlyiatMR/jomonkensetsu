@@ -40,7 +40,7 @@
 
 /*SCROLL*/
 html {
-   /*scroll-behavior: smooth;*/
+   scroll-behavior: smooth;
 }
 
 #vid[src="video/movie_2-1_loop_vertical.mp4?vd=20230712144011"] {
@@ -300,7 +300,7 @@ html {
    }
 
    #btn-go-top {
-      right: 15px !important;
+      right: 50px !important;
       bottom: 15px !important;
    }
    #btn-toi {
@@ -439,5 +439,10 @@ cursor: pointer;
 
 .slider-after figcaption {
    right: 12px;
+}
+
+.router-link-exact-active  ,.router-link-active {
+   background: none !important;
+   border-top-width: 4px;
 }
 /*--------------------------------------------------------------------------------------------------------------*/

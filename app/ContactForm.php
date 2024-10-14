@@ -8,13 +8,8 @@ class ContactForm extends Model
 {
    protected $fillable = [
       'company',
-      'code',
-      'name',
-      'phone',
       'email',
-      'subject',
-      'content',
-      'is_readed'
+      'body',
    ];
 
    public function getCreatedAtAttribute()

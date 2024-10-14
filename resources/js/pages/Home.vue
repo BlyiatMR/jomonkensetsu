@@ -9,59 +9,26 @@
         </svg>
     </div> -->
 
-    <section>
-    <nav class="flex justify-evenly items-center max-md:justify-center max-md:relative max-md:overflow-hidden">
-      <div class="my-3">
-        <img src="assets/img/jomon/home1/icon-logo.jpg" class="w-[90px] max-md:w-[120px]" alt="Logo">
-      </div>
-      <!-- Desktop Navigation -->
-      <div class="flex gap-5 mt-3 max-md:hidden">
-        <a href="#" class="text-[13px] border-t-4 border-[#1A377C] px-2 pt-[5px]">ホーム</a>
-        <a href="#" class="text-[#1A377C] text-[13px] border-t-[1px] border-[#1A377C] px-2 pt-2 hover:border-t-4 hover:pt-[5px]">構造</a>
-        <a href="#" class="text-[#1A377C] text-[13px] border-t-[1px] border-[#1A377C] px-2 pt-2 hover:border-t-4 hover:pt-[5px]">代表者について</a>
-        <a href="#" class="text-[#1A377C] text-[13px] border-t-[1px] border-[#1A377C] px-2 pt-2 hover:border-t-4 hover:pt-[5px]">これまでの歩み</a>
-        <a href="#" class="text-[#1A377C] text-[13px] border-t-[1px] border-[#1A377C] px-2 pt-2 hover:border-t-4 hover:pt-[5px]">お問い合わせ</a>
-      </div>
-      <!-- Mobile Navigation Button -->
-      <div class="max-md:flex hidden justify-end">
-        <div id="resNav" @click="toggleMenu" class="absolute top-10 right-10">
-          <img id="resBtn" class="w-[35px]" src="assets/img/jomon/home1/bars-icon.jpg" alt="Menu Button">
-        </div>
-        <!-- Mobile Menu -->
-        <div v-bind:class="{'hidden': !menuVisible, 'block': menuVisible}" id="resMenu" class="fixed top-0 left-0 w-full h-[664px] p-10 bg-white text-black resGoDown z-50">
-          <div id="resNavClose" @click="closeMenu" class="absolute top-10 right-10 rounded-md text-black">
-            <img class="w-[35px]" src="assets/img/jomon/home1/close-icon.jpg" alt="Close Button">
-          </div>
-          <div class="block"></div>
-          <div class="flex flex-col mb-8">
-            <a href="#" class="text-[25px] text-center mt-10">ホーム</a>
-            <a href="#" class="text-[25px] text-center mt-10">構造</a>
-            <a href="#" class="text-[25px] text-center mt-10">代表者について</a>
-            <a href="#" class="text-[25px] text-center mt-10">これまでの歩み</a>
-            <a href="#" class="text-[25px] text-center mt-10">お問い合わせ</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </section>
+    <navbar></navbar>
 
     <section>
         <div class="relative overflow-hidden flex items-center justify-center h-fit w-full">
-            <img class="w-full object-cover object-top -z-10 max-md:inset-auto" src="assets/img/jomon/home1/bg-home.jpg" alt="">
+            <img class="w-full max-sm:h-52 object-cover object-top -z-10 max-md:inset-auto" src="assets/img/jomon/home1/bg-home.jpg" alt="">
             <div class="absolute z-20 text-center">
-                <h1 class="text-white text-[40px] font-semibold max-md:text-[19px]">縄文文明の知恵を今に！</h1>
+                <h1 class="text-white text-[40px] font-semibold max-md:text-[25px]">縄文文明の知恵を今に！</h1>
             </div>
         </div>
     </section>
 
+    <!-- Story -->
     <section class="max-w-[980px] mx-auto mt-12">
         <div class="mx-32 max-md:mx-10">
             <div>
-                <h1 class="font-semibold text-[25px] tracking-widest text-center text-[#33343F]">STORY</h1>
+                <h1 class="font-semibold text-[25px] tracking-[3px] text-center text-[#33343F]">STORY</h1>
             </div>
             <hr class="w-[72px] border-solid border-black mx-auto mb-1">
             <div>
-                <p class="text-[12px] text-center font-thin text-[#3344F]">これまでの歩み</p>
+                <p class="text-[12px] tracking-[3px] text-center font-thin text-[#3344F]">これまでの歩み</p>
             </div>
         </div>
 
@@ -84,7 +51,7 @@
                 </div>
             </div>
             <div class="flex mt-6 ml-40 max-lg:ml-0 max-lg:justify-center">
-                <a href="" class="flex items-center py-[3px] px-5 rounded-3xl bg-[#1A377C] text-white tracking-[6px] hover:bg-[#3F7652] duration-300">
+                <router-link to="/story" class="flex items-center py-[3px] px-5 rounded-3xl bg-[#1A377C] text-white tracking-[6px] hover:bg-[#3F7652] duration-300">
                     <span>続きを読む</span>
                     <span class="w-[37px] h-[37px] fill-white">
                         <svg class="" data-bbox="9 70.9 181 59" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
@@ -93,20 +60,21 @@
                             </g>
                         </svg>
                     </span>
-                </a>
+                </router-link>
             </div>
         </div>
     </section>
 
-    <section class="max-w-[980px] mx-auto mt-48 max-md:mt-20">
+    <!-- About -->
+    <section id="about" class="max-w-[980px] mx-auto mt-48 max-md:mt-20">
         <div class="mx-20 max-md:mx-6">
             <div class="mx-32 max-md:mx-10">
                 <div>
-                    <h1 class="font-semibold text-[25px] tracking-widest text-center text-[#33343F]">ABOUT</h1>
+                    <h1 class="font-semibold text-[25px] tracking-[3px] text-center text-[#33343F]">ABOUT</h1>
                 </div>
                 <hr class="w-[72px] border-solid border-black mx-auto mb-1">
                 <div>
-                    <p class="text-[12px] text-center font-thin text-[#3344F]">代表プロフィール</p>
+                    <p class="text-[12px] tracking-[3px] text-center font-thin text-[#3344F]">代表プロフィール</p>
                 </div>
             </div>
             <div class="relative mt-10">
@@ -141,7 +109,7 @@
                     </div>
                 </div>
                 <div class="flex justify-end max-lg:justify-center">
-                    <a class="flex items-center mt-5 mr-40 max-lg:mr-0 tracking-[6px] py-1 px-5 rounded-3xl bg-[#1A377C] text-white hover:bg-[#3F7652] duration-300" href="">
+                    <router-link to="/structure" class="flex items-center mt-5 mr-40 max-lg:mr-0 tracking-[6px] py-1 px-5 rounded-3xl bg-[#1A377C] text-white hover:bg-[#3F7652] duration-300" href="">
                         <span>詳しく見る</span>
                         <span class="w-[37px] h-[37px] fill-white">
                             <svg class="" data-bbox="9 70.9 181 59" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
@@ -150,84 +118,37 @@
                                 </g>
                             </svg>
                         </span>
-                    </a>
+                    </router-link>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="max-w-[980px] mx-auto mt-48 max-md:mt-20">
-        <div class="mx-32 max-md:mx-10">
-            <div>
-                <h1 class="font-semibold text-[25px] tracking-widest text-center text-[#33343F]">CONTACT</h1>
-            </div>
-            <hr class="w-[72px] border-solid border-black mx-auto mb-1">
-            <div>
-                <p class="text-[12px] text-center font-thin text-[#3344F]">お問い合わせ</p>
-            </div>
-        </div>
-        <div class="mt-10 mx-36 max-md:mx-6">
-            <p class="text-center tracking-widest max-md:text-start">縄文建設がご提案する現代版竪穴式住居は太陽光発電システム搭載の竪穴式住居です <br>ご興味のある方はお気軽にお問い合わせください</p>
-        </div>
-
-        <div class="mt-16 mx-48 max-md:mx-6 max-md:mt-10">
-            <form action="">
-                <div class="my-4">
-                    <h2 class="text-[14px] mb-2">名前</h2>
-                    <input class="w-[350px] max-md:w-full border border-black py-1 px-2" type="text">
-                </div>
-                <div class="my-4">
-                    <h2 class="text-[14px] mb-2">メールアドレス</h2>
-                    <input class="w-full border border-black py-1 px-2" type="text">
-                </div>
-                <div class="my-4">
-                    <h2 class="text-[14px] mb-2">メッセージ</h2>
-                    <textarea class="w-full border border-black p-2 h-[80px]" id="" cols="30" rows="10"></textarea>
-                </div>
-                <div class="flex justify-center">
-                    <a class="text-[14px] shadow-md shadow-[#9AA9D4] text-center w-full tracking-[6px] py-2 px-5 rounded-3xl bg-[#1A377C] text-white hover:bg-[#3F7652] duration-300" href="">送信</a>
-                </div>
-            </form>
-        </div>
-
-        <div class="my-10 mx-48 max-lg:mx-6">
-            <div>
-                <p class="text-center text-[12px] tracking-widest mb-2 max-md:text-[14px]">メールの受付は24時間365日行っておりますが縄文建設からの返信スケジュールは以下の通りです</p>
-                <p class="text-center text-[12px] tracking-widest max-md:text-[14px]">​よろしくお願いします</p>
-            </div>
-            <div class="mt-5 mx-48 max-md:mx-6">
-                <p class="text-center text-[12px] tracking-widest max-md:text-[14px]">月～金　18：00～20：00</p>
-                <p class="text-center text-[12px] tracking-widest max-md:text-[14px]">土・日・祝　10：00～16：00</p>
-            </div>
-        </div>
+    <section class="mt-48">
+        <Contact></Contact>
     </section>
 
-    <footer class="bg-[#F3F5F8] py-7">
-        <div class="max-w-[980px] mx-auto flex justify-center items-center gap-32 max-md:flex-col max-md:gap-5">
-            <div>
-                <img src="assets/img/jomon/home1/icon-logo.jpg" width="96px" alt="">
-            </div>
-            <div class="flex">
-                <svg class="w-[35px] h-[21px] fill-[#1A377C]" preserveAspectRatio="none" data-bbox="53.5 64.6 93.4 62.1" viewBox="53.5 64.6 93.4 62.1" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="shape" role="presentation" aria-hidden="true" aria-label="">
-                    <g>
-                        <path d="M56.7 126.7h87c1.8 0 3.2-1.5 3.2-3.2V67.8c0-1.8-1.5-3.2-3.2-3.2h-87c-1.8 0-3.2 1.5-3.2 3.2v55.7c0 1.7 1.4 3.2 3.2 3.2zm3.3-6.5V73.6l38.3 22.9c.5.3 1.1.5 1.7.5s1.2-.2 1.7-.5l38.9-23.3v47H60zM68.3 71h63.1L99.9 89.9 68.3 71z"></path>
-                    </g>
-                </svg>
-                <p class="text-[15px] font-light ml-2">jomon.kensetsu@gmail.com</p>
-            </div>
-        </div>
-    </footer>
+    <Footer></Footer>
 
 </div>
 </template>
     
 <script>
 
+import Navbar from './sections/Navbar.vue';
+import Contact from './sections/Contact.vue';
+import Footer from './sections/Footer.vue';
+
 // Navigation Responsive
 // Navigation Responsive
 // Navigation Responsive
 
 export default {
+    components : {
+        Navbar,
+        Contact,
+        Footer,
+    },
   data() {
     return {
       menuVisible: false
@@ -253,6 +174,3 @@ export default {
 // Navigation Responsive
 
 </script>
-
-<style>
-</style>

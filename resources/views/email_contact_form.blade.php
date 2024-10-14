@@ -1,8 +1,14 @@
-<div><b>{{ $data['company']}}</b></div>
-<div><b>{{ $data['code']}}</b></div>
+<div>------------------------------------------------------------------------------------------------------</div>
+
+<div>From: {{ $data['company']}}</div>
+<div>{{ $data['email']}}</div>
+<div>------------------------------------------------------------------------------------------------------</div>
 <br>
-<div><b>{{ $data['name'] }}様</b></div>
-<div>電話番号：{{ $data['phone'] }}</div>
-<div>メールアドレス：{{ $data['email'] }}</div>
+
+<div><b>問い合わせ内容</b></div>
+@if (empty($data['body']))
+-
+@else
+<div>{{ $data['body'] }}</div>
+@endif
 <br>
-<div>{{ $data['content'] }}</div>
